@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMakers_</title>
+    <link rel="icon" href="./img/axol_icon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__menu">
+            <img src="./img/white_axol.png" class="header_icon" alt="Logo DMakers">
+            <a class="header__menu__link" href="index.html">Home</a>
+            <a class="header__menu__link" href="https://dmakershub.blogspot.com/" target="_blank">Blog</a>
+            <a class="header__menu__link" href="keyhub.html">Key hub</a>
+            <a class="header__menu__link" href="resources.html">Recursos adicionales</a>
+            <a class="header__menu__link" href="about.html">Sobre nosotros</a>
+            <a class="header__menu__link" href="contact.html">Contacto</a>
+        </nav>
+        
+        <img src="./img/menu_ico.png" class="header_menu_icon" alt="Icono de menu" id="menu-icon">
+        <img src="./img/white_axol.png" class="header_menu_icon" alt="Logo DMakers">
+        
+        <nav class="dropdown-menu" id="dropdown-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://dmakershub.blogspot.com/" target="_blank">Blog</a></li>
+                <li><a href="keyhub.html">Key hub</a></li>
+                <li><a href="resources.html">Recursos adicionales</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    
+    <main>
+        <section class="presentacion_centrada">
+           
+            <section class="presentacion__contenido_centrado" style="margin: 20px; padding: 10px;">
+                <h1 class="presentacion__contenido_centrado_titulo"> <strong class="titulo-destaque">Es bueno verte otra vez  ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</strong></h1>           
+                <p class="presentacion__contenido_centrado_texto">
+                    ¿Tienes lo necesario para desbloquear un mundo de conocimiento? Aquí es donde puedes acceder a recursos exclusivos.
+                    Key Hub es tu puerta de acceso, pero solo aquellos que puedan tener una clave podran pasar. Este es un espacio reservado
+                    para los miembros más comprometidos y audaces, donde encontrarás herramientas, proyectos, y contenido de valor incalculable 
+                    para llevar tus habilidades al siguiente nivel.
+                    Ingresa el código correcto y prepárate para descubrir un universo de oportunidades diseñado exclusivamente para ti. ¡El desafío te espera!
+                </p> 
+            </section>  
+                        
+           
+            <section class="seccion_horizontal" style="margin: 20px; padding: 10px;">
+                
+                <img src="./img/maze.png" class="presentacion__imagen" />
+                
+                    <div class="container">
+                        <div class="container__contenido">
+                            <div class="container__informaciones">
+                                <div class="container__texto">
+                                    <h1 class="presentacion__contenido_centrado_titulo" style="font-family: 'Chakra Petch', sans-serif; 
+                                    font-size: 54px; padding: 0 0 0 0;" id="mensajeGrande"></h1>
+                                    
+                                </div>
+                                <div>
+                                    <p id="mensajeEstado" class="texto__parrafo"></p>
+                                </div>
+                                <input type="text" id="valorUsuario" class="container__input">
+                                <div class="container__botones">
+                                    <button onclick="verificarIntento();" class="container__boton">Ingresar codigo</button>
+                                    <button id="reiniciar" class="container__boton" onclick="redirigir()" disabled>Acceder</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+            </section>
+
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+        <p>Copyright © 2024 DMakers. Todos los derechos reservados.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

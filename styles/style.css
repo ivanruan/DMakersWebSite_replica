@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario:linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    --color-secundario:#F6F6F6;
+    --color-terciario:#e75480;
+    --color-hover: #272727;
+
+    --fuente-montserrat: 'Montserrat', sans serif;
+    --fuente-krona: 'Krona One', sans serif;
+}
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+/*
+    Podemos ir a colorhunt.com para consultar colores de paletas y esto
+    nos permitira rapidamente cambiar de color en nuestras
+    paginas web y estilizar de manera eficiente
+
+    eg.
+    --color-primario:#<color1>;
+    --color-secundario:#<color2>;
+    --color-terciario:#<color3>;
+    --color-hover: #<color4>;
+
+*/
+
+body {
+    background: var(--color-primario);
+    color: var(--color-secundario);
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.main{
+    flex: 1;
+}
+.header{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px;
+    background-color: #1354A5;
+    border-bottom: 1px solid #1354A5; /* Borde en la parte inferior del header */
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: none;
+    padding: 2% 0% 0% 0%;
+}
+
+.header__menu__link:hover{
+    color: #007bff;
+}
+
+.header_icon{
+    width: 6%;
+    padding: .5% 0% .5% 0%;
+}
+
+.header_menu_icon{
+    display: none;
+
+}
+
+.dropdown-menu {
+    font-family: var(--fuente-montserrat);
+    color: var(--color-secundario);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: none; /* Oculta el menú por defecto */
+    position: absolute;
+    top: 60px; /* Ajusta la distancia del menú respecto al ícono */
+    right: 0; /* Alinea el menú al lado derecho */
+    background-color: #1354A5;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 20px 0;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+.dropdown-menu li a:hover {
+    color: #007bff;
+}
+
+.titulo-destaque{
+    color: var(--color-terciario);
+}
+
+.presentacion_home{
+    display: flex;
+    align-items: center;
+    padding: 120px 0% 2% 3%;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.seccion_horizontal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0%; 
+    gap: 120px;
+    position: relative;
+}
+
+.presentacion__contenido{
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 0% 0%;
+    
+}
+
+.presentacion__contenido__titulo{
+    font-family: var(--fuente-krona);
+    font-size: 2.25rem;
+
+}
+
+.presentacion__contenido__texto{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+
+}
+
+.presentacion__enlaces__link{
+    width: 105%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 12px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacion__enlaces__link:hover{
+    background-color: var(--color-hover);
+}
+
+.presentacion__enlaces_subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+ /* Esto es un comentario en CSS */
+    /* 
+        Esto es un comentario en CSS con
+        salto de línea
+    */
+.presentacion__imagen{
+    display: block;
+    width: 42%;  
+    max-width: 90%;
+}
+
+.imagen_axol{
+    display: block;
+    width: 42%;  
+    max-width: 70%;
+}
+
+
+/* Presentacion de elementos centrados */
+.presentacion_centrada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 20px 50px 20px;
+    gap: 40px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.presentacion_recursos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 20px 50px 20px;
+    gap: 40px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.presentacion__contenido_centrado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    max-width: 100%;
+    gap: 10px;
+    padding: 1.5% 3%;
+    position: relative; 
+}
+
+.presentacion__contenido_centrado_titulo{
+    font-family: var(--fuente-krona);
+    font-size: 2.25rem;
+    padding: 1%;
+}
+
+.presentacion__contenido_centrado_texto{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1%;
+}
+
+
+.icono{
+    width: 30px;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color:var(--color-secundario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: flex;
+    left: 0;
+    bottom: 0;
+}
+
+
+.container {
+    width: 800px;
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    border: 1px solid #1875E8;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-size: 100% 100%;
+    position: relative;
+}
+
+
+.container__contenido {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.container__informaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+.container__boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 7px 60px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 1rem;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.container__boton:hover {
+    background-color: #45a049;
+}
+
+.container__boton:disabled {
+    background: #898989;
+}
+
+.container__boton.desactivado{
+    background-color: #ccc; /* Color para el enlace desactivado */
+    color: #666; /* Color del texto para el enlace desactivado */
+    cursor: not-allowed; /* Muestra un cursor de no permitido */
+
+}
+
+.container__texto {
+    margin: 16px 10px 16px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+.container__input {
+    width: 90%;
+    height: 25px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 2.5rem;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+}
+
+.container__botones {
+    display: flex;
+    gap: 1.75em;
+}
+
+
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+.texto__parrafo {
+    display: block;
+    visibility: visible;
+    font-size: 32px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* para la seccion de recursos */
+
+.recursos {
+    width: 90%;
+    max-width: 1200px;
+    padding: 2rem;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para las secciones */
+.recursos__comunidad, .recursos__ingles, .recursos__cursos, .recursos__comunidades, .recursos__productividad {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 60%;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+    text-align: justify;
+}
+
+/* Estilos para los títulos */
+.recursos__titulo {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-terciario);
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--fuente-krona);
+}
+
+/* Estilos para las listas */
+.recursos__lista {
+    list-style-type: none;
+    padding-left: 0;
+    font-family: var(--fuente-montserrat);
+    
+}
+
+.recursos__item {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Estilos para los enlaces */
+.recursos__item a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.recursos__item a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+
+
+
+/* vamos a crear media queries */
+
+@media (max-width: 1250px){
+    .presentacion_home{
+        flex-direction: column; 
+        padding: 110px 0% 2% 40px;     
+    }
+
+    .seccion_horizontal{
+        flex-direction: column; 
+        padding: 2% 5% 1% 5%;
+        font-size: 1.4rem;
+        width: 90%;
+        gap:30px;
+    }
+
+    .presentacion__contenido{
+        width: auto; 
+        /* auto siempre se adapta al elemento padre*/
+        /* otra forma de hacerlo bien es con width:100%, lo cual hace un ajustado automatico al tama;o de la pantalla */
+    }
+
+
+    .presentacion__imagen{
+        width: auto;
+        margin: 0;
+        padding: 0% 0% 0% 0%;
+    }
+
+    .imagen_axol{
+        display: block;
+        width: 100%;  
+        max-width: 100%;
+    }
+
+    .presentacion__contenido_centrado_titulo{
+        padding: 0%;
+        
+    }
+
+    .presentacion__contenido_centrado_texto{
+        padding: 2% 2% 1% 2%;
+        font-size: 1.4rem;
+        width: 100%;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between; /* Alinea horizontalmente el contenido en el centro */
+        align-items: center;     /* Alinea verticalmente el contenido en el centro */
+        height: 80px; 
+        padding: 2% 0% 2% 2%;
+    }
+
+    /* Cuando la version desktop ya tiene display: flex o algo similar, no se necesita agregar en la version de media querie*/
+    .header__menu{
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        top: 80px;
+    }
+
+    .header_menu_icon {
+        display: flex; /* Muestra el ícono en pantallas pequeñas */
+        justify-content: space-between;
+        width: 80px;/* Ajusta el tamaño del ícono */
+        height: auto;
+        gap: 10px;/* Alinea horizontalmente el contenido en el centro */
+        cursor: pointer;
+        padding: 6% 43% 5% 38%;
+        right: 0;  
+        margin: 10px; /* Asegura espacio entre las imágenes */
+        padding: 5px;  
+    }
+
+    .header__menu,
+    .header nav{
+        display: none;
+    }
+
+    .container {
+    width: 800px; 
+    }
+
+    .recursos__comunidad, .recursos__ingles, .recursos__cursos, .recursos__comunidades, .recursos__productividad {
+        width: 120%;
+    
+    } 
+    
+    .presentacion_recursos{
+        padding: 32%;
+    }
+    
+}
+
+
+@media (max-width: 900px){
+
+    .dropdown-menu {
+        top: 60px;
+    }
+
+    .header_menu_icon{  
+        margin: 10px; /* Asegura espacio entre las imágenes */
+        padding: 5px;
+        max-width: 100px; /* O el tamaño que prefieras */
+        height: auto;
+        display: inline-block;
+    }    
+
+    .container {
+        width: 90%;
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 20rem; /* Agrega relleno si es necesario */
+    }
+
+    .container__botones {
+        flex-direction: column; /* Cambia la dirección del flex para pantallas más pequeñas */
+        gap: 1em; /* Ajusta el espacio entre los botones */
+    }
+
+    .recursos {
+        padding: 1.5rem;
+    }
+
+    .recursos__titulo {
+        font-size: 1.8rem;
+    }
+
+    .recursos__item {
+        font-size: 1rem;
+    }
+
+    .recursos__comunidad, .recursos__ingles, .recursos__cursos, .recursos__comunidades, .recursos__productividad {
+        width: 150%;
+    
+    }    
+
+    
+}
+
+@media (max-width: 700px){
+    
+
+    .container {
+        width: 90%;
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 15rem; /* Agrega relleno si es necesario */
+    }
+
+    .container__contenido {
+        bottom: 1rem; /* Ajusta la posición en pantallas más pequeñas */
+    }
+
+    .container__informaciones {
+        padding: 1.5rem; /* Ajusta el padding para pantallas más pequeñas */
+        gap: 15px; /* Ajusta el espacio entre los elementos */
+    }
+
+    .container__boton {
+        padding: 15px 20px; /* Ajusta el padding para pantallas más pequeñas */
+        font-size: 18px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .container__input {
+        width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        height: 45px; /* Ajusta la altura */
+        padding: 2rem; /* Ajusta el padding */
+        font-size: 32px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .container__botones {
+        flex-direction: column; /* Cambia la dirección del flex para pantallas más pequeñas */
+        gap: 1rem; /* Ajusta el espacio entre los botones */
+    }
+
+    .texto__parrafo {
+        font-size: 30px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .recursos__comunidad, .recursos__ingles, .recursos__cursos, .recursos__comunidades, .recursos__productividad {
+        width: 250%;
+    
+    }  
+
+    .recursos__titulo {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px){
+    .recursos__titulo {
+        font-size: .75rem;
+    }
+    
+    
+    .recursos__comunidad, .recursos__ingles, .recursos__cursos, .recursos__comunidades, .recursos__productividad {
+        width: 550%;
+    
+    }  
+
+
+    .container {
+        width: 20%;
+        height: 200%; /* Ajusta la altura automáticamente */
+        padding: 11.5rem; /* Agrega relleno si es necesario */
+    }
+
+    .container__contenido {
+        bottom: 0rem; /* Ajusta la posición en pantallas más pequeñas */
+    }
+
+    .container__informaciones {
+        padding: 0rem; /* Ajusta el padding para pantallas más pequeñas */
+        gap: 5px; /* Ajusta el espacio entre los elementos */
+    }
+
+    .texto__parrafo {
+        font-size: 22px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .container__input {
+        width: 80%; /* Ajusta el ancho al 100% del contenedor */
+        height: 25px; /* Ajusta la altura */
+        padding: 2rem; /* Ajusta el padding */
+        font-size: 24px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .container__botones {
+        flex-direction: column; /* Cambia la dirección del flex para pantallas más pequeñas */
+        gap: .5rem;/* Ajusta el espacio entre los botones */
+        padding-bottom: 3%;
+    }
+
+    .presentacion_recursos{
+        padding: 42%;
+    }
+
+    
+}

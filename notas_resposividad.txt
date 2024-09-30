@@ -1,0 +1,13 @@
+-----Unidades de medida-----
+
+-El pixel es una medida escricta y estatica
+-Existen medidas relativas que se pueden utilizar en CSS
+    -para em --> se define el tamano desde una etiqueta padre que se tomara como la unidad, es relativo al font-size
+    -para rem --> se define el tamano desde una etiqueta padre, pero no se termina redimensionando como em, esto nos evita hacer las conversiones, es relativo al root-element
+
+-Por defecto 1 rem = 16px 
+
+
+-Para hacer cambios relativos entre dispositivos, podemos hacer uso de porcentajes
+       -% se utiliza como medida relativa al elemento padre 
+
